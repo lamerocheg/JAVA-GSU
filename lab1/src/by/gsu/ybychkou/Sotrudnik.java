@@ -3,7 +3,7 @@ package by.gsu.ybychkou;
 import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class Sotrudnik extends Printable {
+public class Sotrudnik implements Printable {
     private String         fio;
     private String         doljnost;
     private Integer        zarplata;
@@ -87,6 +87,11 @@ public class Sotrudnik extends Printable {
      */
     public Integer getZarplata() {
         return this.zarplata;
+    }
+
+    @Override
+    public void printArrays(final int level) {
+        Printable.printArray(this.podkluchenia, level);
     }
 
     /**

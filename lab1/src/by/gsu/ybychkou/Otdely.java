@@ -3,14 +3,14 @@ package by.gsu.ybychkou;
 import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class Otdely extends Printable {
+public class Otdely implements Printable {
     private String      adress;
     private Sotrudnik[] sotrudniki;
 
     public Otdely() {
         this.sotrudniki = new Sotrudnik[5];
-        for (Sotrudnik sotr : this.sotrudniki) {
-            sotr = new Sotrudnik();
+        for (int i = 0; i < this.sotrudniki.length; i++) {
+            this.sotrudniki[i] = new Sotrudnik();
         }
         this.adress = new String[] {"Lenina 1", "Pobedi 3", "Kojara 3"}[new SecureRandom()
                 .nextInt(3)];
@@ -69,6 +69,11 @@ public class Otdely extends Printable {
     /**
      * print data with Header
      */
+
+    @Override
+    public void printArrays(final int level) {
+        Printable.printArray(this.sotrudniki, level);
+    }
 
     /**
      * @param adress

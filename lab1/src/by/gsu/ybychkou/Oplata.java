@@ -3,7 +3,7 @@ package by.gsu.ybychkou;
 import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class Oplata {
+public class Oplata implements Printable {
     private String  date;
     private Integer summa;
 
@@ -36,9 +36,6 @@ public class Oplata {
         return new Oplata(date, summa);
     }
 
-    public static void printHeader() {
-    }
-
     /**
      * @return the date
      */
@@ -53,12 +50,9 @@ public class Oplata {
         return this.summa;
     }
 
-    public void print() {
-        Oplata.printHeader();
-        this.printInfo();
-    }
+    @Override
+    public void printArrays(final int level) {
 
-    public void printInfo() {
     }
 
     /**

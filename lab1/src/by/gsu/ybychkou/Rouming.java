@@ -3,7 +3,7 @@ package by.gsu.ybychkou;
 import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class Rouming {
+public class Rouming implements Printable {
     private String dateOfStart;
     private String dateOfStop;
 
@@ -39,9 +39,6 @@ public class Rouming {
 
     }
 
-    public static void printHeader() {
-    }
-
     /**
      * @return the dateOfStart
      */
@@ -56,12 +53,8 @@ public class Rouming {
         return this.dateOfStop;
     }
 
-    public void print() {
-        Rouming.printHeader();
-        this.printInfo();
-    }
-
-    public void printInfo() {
+    @Override
+    public void printArrays(final int level) {
     }
 
     /**

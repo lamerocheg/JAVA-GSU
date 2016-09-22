@@ -3,7 +3,7 @@ package by.gsu.ybychkou;
 import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class Podkluchenie {
+public class Podkluchenie implements Printable {
     private String    number;
     private String    fio;
     private String    date;
@@ -84,9 +84,6 @@ public class Podkluchenie {
         return new Podkluchenie(number, fio, date, tarif, roums, oplaty);
     }
 
-    public static void printHeader() {
-    }
-
     /**
      * @return the date
      */
@@ -129,12 +126,11 @@ public class Podkluchenie {
         return this.tarif;
     }
 
-    public void print() {
-        Podkluchenie.printHeader();
-        this.printInfo();
-    }
+    @Override
+    public void printArrays(final int level) {
+        Printable.printArray(this.roumingi, level);
+        Printable.printArray(this.oplaty, level);
 
-    public void printInfo() {
     }
 
     /**
